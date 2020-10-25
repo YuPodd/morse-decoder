@@ -39,9 +39,9 @@ const MORSE_TABLE = {
 
 const dot = '.';
 const dash = '-';
-let letter = '';
 
 function decode(expr) {
+    let letter = '';
     for (let i = 0; i < expr.length; i+=10){
         let j = i;
           if (expr.charAt(i) == '*') {
@@ -69,6 +69,7 @@ function decode(expr) {
           symbol = '';
           
         }
+        return letter;
 }
 
 module.exports = {
